@@ -15,16 +15,19 @@
             margin: 0;
             padding: 0;
         }
+        
         header {
             background-color: #eceeef;
             color: balck;
             padding: 10px 20px;
             text-align: center;
         }
+        
         main {
             padding: 20px;
             text-align: center;
         }
+        
         footer {
             background-color: #333;
             color: white;
@@ -34,7 +37,33 @@
             bottom: 0;
             width: 100%;
         }
-
+        
+        .about-me {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about-me h2 {
+            text-align: center;
+            color: #333;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .info-item i {
+            margin-right: 10px;
+            color: #4CAF50;  /* 아이콘 색상 */
+        }
+        .info-item span {
+            font-size: 16px;
+            color: #555;
+        }
+        
         /* 프로젝트 카드 스타일 */
         .projects {
             display: flex;
@@ -82,11 +111,38 @@
         }
     </style>
 </head>
+     
 <body>
-    <header>
-        <h1>김애진 포트폴리오</h1>
-    </header>
     <main>
+        <!-- About Me 섹션 -->
+    <div class="about-me">
+        <h2>About Me</h2>
+        <div class="info-item">
+            <i class="fas fa-user"></i> <!-- 이름 아이콘 -->
+            <span>김애진</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-birthday-cake"></i> <!-- 생년월일 아이콘 -->
+            <span>2002년 1월 21일</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i> <!-- 위치 아이콘 -->
+            <span>서울시 은평구</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-phone-alt"></i> <!-- 연락처 아이콘 -->
+            <span>010-5178-2374</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-envelope"></i> <!-- 이메일 아이콘 -->
+            <span>rladowls0121@naver.com</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-graduation-cap"></i> <!-- 학력 아이콘 -->
+            <span>명지전문대 정보통신공학과</span>
+        </div>
+    </div>
+        
         <h2>PROJECTS</h2>
         <br>
         <div class="projects">
@@ -111,8 +167,6 @@
                 <a href="#" class="button">README</a>
                 <a href="#" class="button">이미지</a>
             </div>
-
-            <br>
 
             <!-- 프로젝트 카드 3 -->
             <div class="project-card">
