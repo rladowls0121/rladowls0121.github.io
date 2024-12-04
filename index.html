@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Gowun+Batang&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome 아이콘 -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <style>
         /* 기본 스타일 */
@@ -140,9 +140,10 @@
         .about-me {
             display: flex; /* Flexbox를 사용해 항목을 배치 */
             flex-wrap: wrap; /* 항목들이 줄 바꿈이 가능하게 함 */
-            justify-content: space-between; /* 항목 간의 간격을 균등하게 배치 */
+            justify-content: center; /* 중앙 정렬 */
             text-align: center; /* 섹션 내의 텍스트들을 수평 중앙 정렬 */
             padding: 40px 0; /* 상하 여백 추가 */
+            gap: 20px; /* 항목 간 간격 */
         }
         
         .about-me h2 {
@@ -157,17 +158,17 @@
             flex: 1 1 30%; /* 각 항목의 너비를 30%로 설정 (3개씩 한 줄에 배치) */
             display: flex; /* 아이콘과 텍스트를 가로로 배치 */
             align-items: center; * 아이콘과 텍스트를 세로로 중앙 정렬 */
-            margin-bottom: 20px; /* 각 항목 간의 여백 */
+            flex-direction: column; /* 아이콘과 텍스트를 세로로 배치하려면 'column' */
             justify-content: center; /* 아이콘과 텍스트를 수평 중앙 정렬 */
+            padding: 10px;
             font-size: 1rem;
             color: #555;
-            text-align: center;
         }
 
         .info-item i {
-            margin-right: 10px;
+            margin-right: 10px; /* 아이콘과 텍스트 간격 */
             color: black;  /* 아이콘 색상 */
-            font-size: 1.5rem; /* 아이콘 크기 조정 */
+            font-size: 1.5rem; /* 아이콘 크기 */
         }
         
         .info-item p {
