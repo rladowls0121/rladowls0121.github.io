@@ -30,7 +30,7 @@
             left: 0;          /* 왼쪽 끝에 위치 */
             width: 100%;      /* 너비를 100%로 설정 */
             background-color: #FFFBF8; /* 헤더 배경색 */
-            color: black;
+            color: #FE67A4;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between; /* 로고와 메뉴를 양쪽으로 배치 */
@@ -48,18 +48,18 @@
 
         header h1 a {
             color: #FE67A4;
-            text-decoration: none;
-        }
-
-        header h1 a:hover {
-            text-decoration: none;
+            font-size: 1.5rem;
         }
 
         header nav {
             color: #FE67A4;
-            text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #FE67A4;
         }
         
         /* 본문 여백 */
@@ -109,12 +109,40 @@
             margin-bottom: 40px; /* 섹션 아래에 여백 추가 */
         }
 
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skills li {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px 20px;
+            text-align: center;
+            flex: 1 1 150px;
+            max-width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         .Skills h2 {
             margin-bottom: 40px; /* 제목과 내용 간 여백을 40px로 설정 */
             text-align: center;
             font-size: 5rem;
             margin-bottom: 20px;
             color: #333;
+        }
+
+        .skills li i {
+            font-size: 1.5rem;
+            color: #FE67A4;
+            margin-bottom: 10px;
         }
 
         .skills p {
@@ -290,6 +318,13 @@
         html {
             scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
         }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .project-card {
+                width: 100%;
+            }
+        }
     </style>
 </head>
      
@@ -350,11 +385,27 @@
     </div>
 </section>
 
-    <section class="skills">
-        <h2>SKILLS</h2>
-        <p>프로그래밍 언어: Python, JavaScript, C++</p>
-        <p>웹 기술: HTML, CSS, React</p>
-    </section>
+    <section id="skills" class="skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-code"></i>
+                    <p>Python</p>
+                </li>
+                <li>
+                    <i class="fas fa-code"></i>
+                    <p>JavaScript</p>
+                </li>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <p>HTML & CSS</p>
+                </li>
+                <li>
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </li>
+            </ul>
+        </section>
 
     <section class="projects">
         <h2><b>PROJECTS</b></h2>       
