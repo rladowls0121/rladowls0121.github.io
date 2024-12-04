@@ -128,7 +128,8 @@
             padding: 40px 0;
             background-color: #ffffff;
         }
-        
+
+        /* 제목 스타일 */
         .about-me h2 {
             width: 100%; /* 부모 요소의 너비에 맞게 확장 */
             text-align: center; /* 제목은 중앙 정렬 */
@@ -140,9 +141,9 @@
         /* 프로필 사진과 정보 정렬 */
         .profile-container {
             display: flex;
-            align-items: flex-start; /* 수직 정렬: 위쪽 정렬 */
+            align-items: center; /* 수직 정렬: 가운데 정렬 */
             justify-content: center; /* 수평 정렬: 중앙 정렬 */
-            gap: 30px; /* 이미지와 정보 간격 */
+            gap: 50px; /* 이미지와 정보 간격 */
         }
         
         .profile-photo img {
@@ -158,7 +159,7 @@
         .info-list {
             display: flex;
             flex-direction: column; /* 세로로 정렬 */
-            align-items: center; /* 중앙 정렬 */
+            align-items: center; /* 아이콘과 텍스트를 세로로 정렬하고 중앙 정렬 */
             gap: 15px; /* 항목 간 간격 */
         }
 
@@ -166,10 +167,10 @@
         .info-item {
             display: flex; /* 아이콘과 텍스트를 가로로 배치 */
             align-items: center; * 아이콘과 텍스트를 세로로 중앙 정렬 */
-            text-align: center; /* 텍스트 중앙 정렬 */
-            font-size: 1rem;
+            justify-content: center; /* 아이콘과 텍스트를 수평으로 중앙 정렬 */
+            font-size: 1.2rem;
             color: #555;
-            gap: 15px; /* 아이콘과 텍스트 간 간격 */
+            gap: 13px; /* 아이콘과 텍스트 간 간격 */
         }
 
         .info-item i {
@@ -286,43 +287,46 @@
             <h2>김애진 포트폴리오</h2>
             <p>안녕하세요.<br>저는 ~하는 프론트 엔드 개발자 김애진입니다.</p>
     </section>
-        
+
     <!-- About Me 섹션 -->
     <section class="about-me">
         <h2><b>ABOUT ME</b></h2>
         <div class="profile-container">
+            
+           <!-- 프로필 사진 -->
+           <div class="profile-photo">
+               <img src="profile-image.jpg" alt="Profile Photo">
+        </div>
 
-        <!-- 프로필 이미지 -->
-        <div class="profile-photo">
-            <img src="images/profile.jpg" alt="프로필 사진">
+        <!-- 정보 리스트 -->
+        <div class="info-list">
+            <div class="info-item">
+                <i class="fas fa-user"></i>
+                <p>김애진</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-birthday-cake"></i>
+                <p>02.01.21</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>서울시 은평구</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <p>010-5178-2374</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>rladowls0121@naver.com</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <p>명지전문대 정보통신공학과</p>
+            </div>
         </div>
-    
-        <!-- 정보 항목들 -->
-        <div class="info-item">
-            <i class="fas fa-user"></i> <!-- 이름 아이콘 -->
-            <p>김애진</p>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-birthday-cake"></i> <!-- 생년월일 아이콘 -->
-            <p>02.01.21</p>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i> <!-- 위치 아이콘 -->
-            <p>서울시 은평구</p>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-phone-alt"></i> <!-- 연락처 아이콘 -->
-            <p>010-5178-2374</p>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-envelope"></i> <!-- 이메일 아이콘 -->
-            <p>rladowls0121@naver.com</p>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-graduation-cap"></i> <!-- 학력 아이콘 -->
-            <p>명지전문대 정보통신공학과</p>
-        </div>
-    </section>
+    </div>
+</section>
 
     <section class="skills">
         <h2>SKILLS</h2>
