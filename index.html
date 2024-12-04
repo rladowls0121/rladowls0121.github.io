@@ -126,7 +126,7 @@
         .about-me {
             text-align: center;
             padding: 40px 0;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
         
         .about-me h2 {
@@ -144,12 +144,7 @@
             justify-content: center; /* 수평 정렬: 중앙 정렬 */
             gap: 30px; /* 이미지와 정보 간격 */
         }
-
-        /* 프로필 사진 스타일 */
-        .profile-photo {
-            margin-bottom: 20px; /* 제목과 사진 간 여백 */
-        }
-
+        
         .profile-photo img {
             width: 150px; /* 프로필 사진 크기 */
             height: 150px; /* 정사각형으로 고정 */
@@ -163,18 +158,15 @@
         .info-list {
             display: flex;
             flex-direction: column; /* 세로로 정렬 */
-            align-items: flex-start; /* 왼쪽 정렬 */
-            gap: 10px; /* 항목 간 간격 */
+            align-items: center; /* 중앙 정렬 */
+            gap: 15px; /* 항목 간 간격 */
         }
 
         /* 정보 항목 스타일 */
         .info-item {
             display: flex; /* 아이콘과 텍스트를 가로로 배치 */
             align-items: center; * 아이콘과 텍스트를 세로로 중앙 정렬 */
-            flex-direction: column; /* 아이콘과 텍스트를 세로로 배치하려면 'column' */
-            justify-content: flex-start; /* 아이콘과 텍스트를 왼쪽 정렬 */
-            width: 50%; /* 섹션 내부에서 중앙에 위치하도록 너비 설정 */
-            padding: 10px;
+            text-align: center; /* 텍스트 중앙 정렬 */
             font-size: 1rem;
             color: #555;
             gap: 15px; /* 아이콘과 텍스트 간 간격 */
