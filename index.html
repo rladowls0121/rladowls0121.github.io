@@ -190,15 +190,14 @@
         }
         
         .project-card {
-            flex: 0 0 calc(50% - 20px); /* 각 카드의 크기를 컨테이너의 50%로 설정, 간격 고려 */
-            max-width: calc(50% - 20px); /* 카드 최대 너비도 동일하게 설정 */
+            flex-basis: 48%; /* 각 카드가 50% 너비를 가짐 (여백을 고려하여 48%로 설정) */
             background-color: #ffffff;
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px; /* 내용 여백 */
             text-align: center; /* 텍스트 가운데 정렬 */
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
         }
         
         .project-card img {
