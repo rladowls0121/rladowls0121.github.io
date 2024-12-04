@@ -279,12 +279,12 @@
         
         /* 배경에 도트 효과 적용 */
         .dotted-background {
-            background: radial-gradient(circle, #FE67A4 20%, transparent 20%) 0 0,
-                        radial-gradient(circle, #FE67A4 20%, transparent 20%) 10px 10px;
-            background-size: 20px 20px; /* 도트 크기와 간격 */
+            background-image: radial-gradient(circle, #FE67A4 10%, transparent 10%); /* 도트 패턴 */
+            background-size: 20px 20px; /* 도트 간격 */
             background-color: #FFFBF8; /* 배경색 */
             width: 100%;
             height: 100vh; /* 화면 전체 크기 */
+            background-repeat: repeat; /* 배경 반복 */
         }
 
         html {
