@@ -56,6 +56,34 @@
             margin-top: 40px;
         }
 
+        .intro {
+            margin-bottom: 40px;
+        }
+        
+        .intro textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .intro button:hover {
+            background-color: #45a049;
+        }
+
         /* About Me 섹션 */
         .about-me h2 {
             text-align: center;
@@ -154,7 +182,14 @@
         <h1><b>김애진 포트폴리오</b></h1>
     </header>
     
-    <main>        
+    <main>
+    <!-- 자기소개 입력 칸 -->
+    <section class="intro">
+            <h2>자기소개</h2>
+            <textarea placeholder="자기소개를 입력하세요..."></textarea>
+            <button>저장하기</button>
+    </section>
+        
     <!-- About Me 섹션 -->
     <section class="about-me">
         <br>
