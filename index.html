@@ -136,16 +136,10 @@
         }
                
         /* About Me 섹션 */
-
         .about-me {
-            display: flex; /* Flexbox를 사용해 항목을 배치 */
-            flex-direction: column; /* 아이템들을 세로로 나열 */
-            align-items: center; /* 섹션 전체를 중앙 정렬 */
-            flex-wrap: wrap; /* 항목들이 줄 바꿈이 가능하게 함 */
-            justify-content: center; /* 중앙 정렬 */
-            text-align: left; /* 전체 텍스트 정렬 설정 */
-            padding: 40px 0; /* 상하 여백 추가 */
-            gap: 20px; /* 항목 간 간격 */
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f9f9f9;
         }
         
         .about-me h2 {
@@ -154,6 +148,14 @@
             font-size: 2rem;
             margin-bottom: 20px; /* 제목과 내용 간의 여백 */
             color: #333;
+        }
+
+        /* 프로필 사진과 정보 정렬 */
+        .profile-container {
+            display: flex;
+            align-items: flex-start; /* 수직 정렬: 위쪽 정렬 */
+            justify-content: center; /* 수평 정렬: 중앙 정렬 */
+            gap: 30px; /* 이미지와 정보 간격 */
         }
 
         /* 프로필 사진 스타일 */
@@ -165,9 +167,17 @@
             width: 150px; /* 프로필 사진 크기 */
             height: 150px; /* 정사각형으로 고정 */
             object-fit: cover; /* 이미지를 잘라서 맞춤 */
-            border-radius: 50%; /* 원형 사진 */
+            border-radius: 0%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
             border: 2px solid #ddd; /* 테두리 */
+        }
+
+        /* 정보 리스트 */
+        .info-list {
+            display: flex;
+            flex-direction: column; /* 세로로 정렬 */
+            align-items: flex-start; /* 왼쪽 정렬 */
+            gap: 10px; /* 항목 간 간격 */
         }
 
         /* 정보 항목 스타일 */
@@ -288,11 +298,12 @@
         
     <!-- About Me 섹션 -->
     <section class="about-me">
-        <h2><b>ABOUT ME</b></h2
+        <h2><b>ABOUT ME</b></h2>
+        <div class="profile-container">
 
-        <!-- 프로필 사진 섹션 -->
+        <!-- 프로필 이미 -->
         <div class="profile-photo">
-        <img src="your-photo.jpg" alt="프로필 사진">
+            <img src="images/profile.jpg" alt="프로필 사진">
         </div>
     
         <!-- 정보 항목들 -->
