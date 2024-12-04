@@ -135,36 +135,31 @@
         /* About Me 섹션 */
 
         .about-me {
-            text-align: center;
+            text-align: center; /* 섹션 내의 텍스트들을 수평 중앙 정렬 */
+            padding: 40px 0; /* 상하 여백 추가 */
         }
         
         .about-me h2 {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* 제목과 내용 간의 여백 */
             color: #333;
         }
         
         .info-item {
             display: flex;
             align-items: center;
-            margin: 10px 0;
+            margin-bottom: 20px; /* 각 항목 간의 여백 */
+            justify-content: center; /* 아이콘과 텍스트를 수평 중앙 정렬 */
             font-size: 1rem;
             color: #555;
             text-align: center;
         }
 
-        .info-item p {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 5px;
-            color: #333;
-            text-align: center;
-        }
         .info-item i {
             margin-right: 10px;
             color: black;  /* 아이콘 색상 */
-            text-align: center;
+            font-size: 1.5rem; /* 아이콘 크기 조정 */
         }
         
         .info-item span {
@@ -267,9 +262,7 @@
         
     <!-- About Me 섹션 -->
     <section class="about-me">
-        <br>
         <h2><b>ABOUT ME</b></h2>
-        <br>
         <div class="info-item">
             <i class="fas fa-user"></i> <!-- 이름 아이콘 -->
             <p>김애진</p>
