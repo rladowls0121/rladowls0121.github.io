@@ -219,7 +219,31 @@
             margin-top: 0px; /* 기본 여백 제거 */
         }
 
-        /* projects 섹션 */
+        /* #projects 섹션에 배경 그라데이션 추가 */
+        #projects {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative; /* ::after를 적용하기 위한 position 설정 */
+            background-color: #fff; /* 필요 시 기본 배경 */
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        #projects::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 105, 180, 0.3), rgba(255, 182, 193, 0.1));
+            z-index: -1; /* 콘텐츠 뒤로 배경이 가도록 설정 */
+            pointer-events: none; /* 클릭 불가 처리 */
+        }
+
+        /* 제목 스타일 */
         .projects h2 {
             margin-bottom: 40px; /* 제목과 내용 간 여백을 40px로 설정 */
             text-align: center;
@@ -241,11 +265,13 @@
             width: calc(50% - 10px); /* 한 줄에 두 개씩 배치 (간격을 고려해 50%에서 10px 차감) */
             background-color: #ffffff;
             border: 1px solid black;
-            border-radius: 8px;
+            border-radius: 10px;
+            margin-bottom: 20px;
             padding: 10px; /* 내용 여백 */
             text-align: center; /* 텍스트 가운데 정렬 */
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .project-card img {
@@ -271,6 +297,7 @@
         
         .project-card:hover {
             transform: translateY(-10px); /* 마우스 오버 시 카드 살짝 올라가는 효과 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .button {
