@@ -155,9 +155,23 @@
             margin-bottom: 20px; /* 제목과 내용 간의 여백 */
             color: #333;
         }
-        
+
+        /* 프로필 사진 스타일 */
+        .profile-photo {
+            margin-bottom: 20px; /* 제목과 사진 간 여백 */
+        }
+
+        .profile-photo img {
+            width: 150px; /* 프로필 사진 크기 */
+            height: 150px; /* 정사각형으로 고정 */
+            object-fit: cover; /* 이미지를 잘라서 맞춤 */
+            border-radius: 50%; /* 원형 사진 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+            border: 2px solid #ddd; /* 테두리 */
+        }
+
+        /* 정보 항목 스타일 */
         .info-item {
-            flex: 1 1 30%; /* 각 항목의 너비를 30%로 설정 (3개씩 한 줄에 배치) */
             display: flex; /* 아이콘과 텍스트를 가로로 배치 */
             align-items: center; * 아이콘과 텍스트를 세로로 중앙 정렬 */
             flex-direction: column; /* 아이콘과 텍스트를 세로로 배치하려면 'column' */
@@ -274,7 +288,14 @@
         
     <!-- About Me 섹션 -->
     <section class="about-me">
-        <h2><b>ABOUT ME</b></h2>
+        <h2><b>ABOUT ME</b></h2
+
+        <!-- 프로필 사진 섹션 -->
+        <div class="profile-photo">
+        <img src="your-photo.jpg" alt="프로필 사진">
+        </div>
+    
+        <!-- 정보 항목들 -->
         <div class="info-item">
             <i class="fas fa-user"></i> <!-- 이름 아이콘 -->
             <p>김애진</p>
