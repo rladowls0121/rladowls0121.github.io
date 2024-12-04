@@ -23,11 +23,14 @@
         header {
             position: fixed;  /* 화면 상단에 고정 */
             top: 0;           /* 화면 상단에 위치 */
-            right: 0;          /* 왼쪽 끝에 위치 */
+            left: 0;          /* 왼쪽 끝에 위치 */
             width: 100%;      /* 너비를 100%로 설정 */
             background-color: black; /* 헤더 배경색 */
             color: black;
             padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* 로고와 메뉴를 양쪽으로 배치 */
+            align-items: center; /* 세로 정렬 */
             z-index: 1000;    /* 다른 요소들 위에 오게 설정 */
         }
 
@@ -58,6 +61,7 @@
         /* 본문 여백 */
         main {
             margin-top: 80px; /* 헤더가 고정되면 본문이 겹치지 않도록 여백 추가 */
+            margin-bottom: 60px; /* 푸터 높이만큼 여백 */
             padding: 20px;
             text-align: center;
         }
