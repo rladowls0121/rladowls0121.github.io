@@ -139,16 +139,18 @@
 
         .about-me {
             display: flex; /* Flexbox를 사용해 항목을 배치 */
+            flex-direction: column; /* 아이템들을 세로로 나열 */
+            align-items: center; /* 섹션 전체를 중앙 정렬 */
             flex-wrap: wrap; /* 항목들이 줄 바꿈이 가능하게 함 */
             justify-content: center; /* 중앙 정렬 */
-            text-align: center; /* 섹션 내의 텍스트들을 수평 중앙 정렬 */
+            text-align: left; /* 전체 텍스트 정렬 설정 */
             padding: 40px 0; /* 상하 여백 추가 */
             gap: 20px; /* 항목 간 간격 */
         }
         
         .about-me h2 {
             width: 100%; /* 부모 요소의 너비에 맞게 확장 */
-            text-align: center;
+            text-align: center; /* 제목은 중앙 정렬 */
             font-size: 2rem;
             margin-bottom: 20px; /* 제목과 내용 간의 여백 */
             color: #333;
@@ -159,22 +161,23 @@
             display: flex; /* 아이콘과 텍스트를 가로로 배치 */
             align-items: center; * 아이콘과 텍스트를 세로로 중앙 정렬 */
             flex-direction: column; /* 아이콘과 텍스트를 세로로 배치하려면 'column' */
-            justify-content: center; /* 아이콘과 텍스트를 수평 중앙 정렬 */
+            justify-content: flex-start; /* 아이콘과 텍스트를 왼쪽 정렬 */
+            width: 50%; /* 섹션 내부에서 중앙에 위치하도록 너비 설정 */
             padding: 10px;
             font-size: 1rem;
             color: #555;
+            gap: 15px; /* 아이콘과 텍스트 간 간격 */
         }
 
         .info-item i {
-            margin-right: 10px; /* 아이콘과 텍스트 간격 */
             color: black;  /* 아이콘 색상 */
             font-size: 1.5rem; /* 아이콘 크기 */
         }
         
         .info-item p {
-            text-align: center;
-            font-size: 16px;
+            font-size: 1rem;
             color: #555;
+            margin: 0; /* 기본 여백 제거 */
         }
 
         /* projects 섹션 */
