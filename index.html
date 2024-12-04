@@ -103,53 +103,49 @@
         }
 
         /* Skiils 섹션 */
-        .skills {
-            padding: 40px 0;
+        #skills {
+            padding: 40px 20px;
             background-color: #FFFBF8;
-            margin-bottom: 40px; /* 섹션 아래에 여백 추가 */
-        }
-
-        .skills ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto;
             max-width: 800px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .skills li {
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px 20px;
-            text-align: center;
-            flex: 1 1 150px;
-            max-width: 200px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .Skills h2 {
-            margin-bottom: 40px; /* 제목과 내용 간 여백을 40px로 설정 */
-            text-align: center;
+        #skills h2 {
             font-size: 5rem;
             margin-bottom: 20px;
+            color: #FE67A4;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .skill p {
+            font-size: 1rem;
+            margin: 0 0 5px;
+            display: flex;
+            justify-content: space-between;
             color: #333;
         }
 
-        .skills li i {
-            font-size: 1.5rem;
-            color: #FE67A4;
-            margin-bottom: 10px;
+        /* 프로그레스 바 컨테이너 */
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 15px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
         }
 
-        .skills p {
-            font-size: 20px;
-            color: #555;
-            line-height: 1.6;
-            text-align: center;
+        /* 프로그레스 바 */
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FFE8C4, #FE67A4);
+            transition: width 0.3s ease;
+            border-radius: 10px;
         }
                
         /* About Me 섹션 */
@@ -385,27 +381,41 @@
     </div>
 </section>
 
-    <section id="skills" class="skills">
-            <h2>SKILLS</h2>
-            <ul>
-                <li>
-                    <i class="fas fa-code"></i>
-                    <p>Python</p>
-                </li>
-                <li>
-                    <i class="fas fa-code"></i>
-                    <p>JavaScript</p>
-                </li>
-                <li>
-                    <i class="fas fa-laptop-code"></i>
-                    <p>HTML & CSS</p>
-                </li>
-                <li>
-                    <i class="fab fa-react"></i>
-                    <p>React</p>
-                </li>
-            </ul>
-        </section>
+    <section id="skills">
+        <h2>Main Skills</h2>
+        <div class="skill">
+            <p>HTML5 <span>80%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <p>CSS3 <span>80%</span></p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <p>JavaScript <span>70%</span></p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <p>jQuery <span>50%</span></p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 50%;"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <p>React <span>70%</span></p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+        </div>
+    </div>
+    <!-- 필요에 따라 추가 -->
+</section>
+
 
     <section class="projects">
         <h2><b>PROJECTS</b></h2>       
