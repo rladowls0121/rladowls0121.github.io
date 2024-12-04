@@ -251,14 +251,15 @@
         }
 
          footer {
-            position: fixed;
+            position: relative;
+            bottom: 0;
             width: 100%;
-            background-color: #e2eff9;
-            color: white;
+            background-color: #e2eff9; /* 푸터 배경 색 */
+            color: white; /* 텍스트 색 */
             text-align: center;
             padding: 20px 0px; /* 내부 여백 (위아래 20px, 좌우 0px) */
-            margin-top: 40px; /* 푸터 위쪽에 40px 여백 추가 */
-            z-index: 1000;
+            margin-top: 20px; /* 푸터 위쪽에 20px 여백 추가 */
+            z-index: 10; /* 푸터를 다른 요소 위로 올리기 */
         }
 
         html {
