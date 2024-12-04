@@ -191,12 +191,15 @@
         }
         
         .project-card {
-            background-color: white;
+            flex: 1 1 calc(50% - 20px); /* 각 카드의 크기를 컨테이너의 50%로 설정, 간격 고려 */
+            max-width: calc(50% - 20px); /* 카드 최대 너비도 동일하게 설정 */
+            background-color: #f4f4f4;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 300px;
+            padding: 20px; /* 내용 여백 */
+            text-align: center; /* 텍스트 가운데 정렬 */
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
             transition: transform 0.3s ease-in-out;
         }
         
