@@ -31,31 +31,28 @@
             z-index: 1000;    /* 다른 요소들 위에 오게 설정 */
         }
 
-         header h1 {
+        header h1 {
             font-size: 1.8rem;
             color: #333;
             margin: 10px 0;
             text-align: center;
         }
 
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        header nav {
+            margin-top: 10px;
         }
 
-        .nav-links a {
+        header nav a {
             color: white;
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            font-size: 18px;
         }
 
-        .nav-links a:hover {
-            color: #ffd700; /* 노란색 강조 */
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        
         }
         
         /* 본문 여백 */
@@ -181,19 +178,21 @@
         .button:hover {
             background-color: #45a049;
         }
+
+        html {
+            scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+        }
     </style>
 </head>
      
 <body>
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
         <h1><b>김애진 포트폴리오</b></h1>
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
     </header>
     
     <main>
@@ -234,14 +233,10 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section class="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-        </ul>
+        <p>프로그래밍 언어: Python, JavaScript, C++</p>
+        <p>웹 기술: HTML, CSS, React</p>
     </section>
 
     <section class="projects">
