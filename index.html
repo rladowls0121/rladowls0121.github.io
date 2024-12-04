@@ -4,69 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김애진 포트폴리오</title>
-     <!-- 구글 폰트 임포트 -->
+    
+    <!-- 구글 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 아이콘 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
         /* 기본 스타일 */
         body {
-            font-family: 'Bebas Neue', sans-serif; /* Bebas Neue 폰트 적용 */
+            font-family: 'Roboto', sans-serif;
             background-color: #ADD8E6;
             margin: 0;
             padding: 0;
         }
-        
-        /* 헤더 고정 */
+
+        /* 헤더 고정 및 네비게이션 스타일 */
         header {
-            position: fixed;  /* 화면 상단에 고정 */
-            top: 0;           /* 화면 상단에 위치 */
-            left: 0;          /* 왼쪽 끝에 위치 */
-            width: 100%;      /* 너비를 100%로 설정 */
-            background-color: #ffffff; /* 헤더 배경색 */
-            color: black;
-            padding: 10px 20px;
-            text-align: center;
-            z-index: 1000;    /* 다른 요소들 위에 오게 설정 */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
-        main {
-            margin-top: 60px; /* 헤더가 고정되면 본문이 겹치지 않도록 여백 추가 */
-            padding: 20px;
+        header h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 10px 0;
             text-align: center;
         }
-        
+
+        /* 본문 여백 */
+        main {
+            margin-top: 80px; /* 헤더와 겹치지 않도록 여백 */
+            padding: 20px;
+        }
+
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 15px 20px;
+            margin-top: 40px;
         }
-        
+
+        /* About Me 섹션 */
         .about-me h2 {
-            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: #333;
         }
-        
+
         .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .info-item i {
-            margin-right: 10px;
-            color: #4CAF50;  /* 아이콘 색상 */
-        }
-        
-        .info-item span {
-            text-align: center;
-            font-size: 16px;
+            margin: 10px 0;
+            font-size: 1rem;
             color: #555;
         }
-        
+
+        .info-item i {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+
         /* 프로젝트 카드 스타일 */
         .projects {
             display: flex;
@@ -74,49 +78,53 @@
             gap: 20px;
             justify-content: center;
         }
-        
+
         .project-card {
             background-color: white;
             border: 1px solid #ddd;
             border-radius: 8px;
             width: 300px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        
+
         .project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-        
+
         .project-card h3 {
             font-size: 1.5rem;
             margin: 15px;
         }
-        
+
         .project-card p {
             padding: 0 15px;
             margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #666;
         }
-        
+
         .project-card:hover {
-            transform: translateY(-10px); /* 마우스 오버 시 카드 살짝 올라가는 효과 */
+            transform: translateY(-10px);
         }
 
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            color: white;
-            background-color: #e2eff9;
+            padding: 8px 15px;
+            color: #fff;
+            background-color: #007BFF;
             text-decoration: none;
             border-radius: 5px;
-            margin-bottom: 15px;
+            font-size: 0.9rem;
+            margin: 5px;
+            transition: background-color 0.3s;
         }
-        
+
         .button:hover {
-            background-color: #45a049;
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -126,96 +134,64 @@
         <h1><b>김애진 포트폴리오</b></h1>
     </header>
     
-    <main>        
+    <main>
         <!-- About Me 섹션 -->
-    <div class="about-me">
-        <br>
-        <h2><b>ABOUT ME</b></h2>
-        <br>
-        <div class="info-item">
-            <i class="fas fa-user"></i> <!-- 이름 아이콘 -->
-            <span>김애진</span>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-birthday-cake"></i> <!-- 생년월일 아이콘 -->
-            <span>02.01.21</span>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i> <!-- 위치 아이콘 -->
-            <span>서울시 은평구</span>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-phone-alt"></i> <!-- 연락처 아이콘 -->
-            <span>010-5178-2374</span>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-envelope"></i> <!-- 이메일 아이콘 -->
-            <span>rladowls0121@naver.com</span>
-        </div>
-        <div class="info-item">
-            <i class="fas fa-graduation-cap"></i> <!-- 학력 아이콘 -->
-            <span>명지전문대 정보통신공학과</span>
-        </div>
-    </div>
+        <section class="about-me">
+            <h2>ABOUT ME</h2>
+            <div class="info-item">
+                <i class="fas fa-user"></i>
+                <span>김애진</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-birthday-cake"></i>
+                <span>02.01.21</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>서울시 은평구</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>010-5178-2374</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>rladowls0121@naver.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>명지전문대 정보통신공학과</span>
+            </div>
+        </section>
 
-        <br>
-        <h2><b>PROJECTS</b></h2>
-        <br>
-        <div class="projects">
-            <!-- 프로젝트 카드 1 -->
+        <!-- Projects 섹션 -->
+        <section class="projects">
+            <h2>PROJECTS</h2>
+
+            <!-- 프로젝트 카드 -->
             <div class="project-card">
                 <img src="project-image1.jpg" alt="프로젝트 1 이미지">
                 <h3>향수 추천 웹사이트</h3>
                 <p>XD를 활용한 향수 추천 웹사이트 디자인.</p>
-                <br>  <!-- 한 줄 띄우기 -->
-                <p>2022.03 - 2022.06 개인 프로젝트</p>              
                 <a href="#" class="button">README</a>
                 <a href="#" class="button">이미지</a>
             </div>
 
-            <!-- 프로젝트 카드 2 -->
             <div class="project-card">
                 <img src="project-image2.jpg" alt="프로젝트 2 이미지">
-                <h3>자기 개발과 코딩 공부를 할 수 있는 웹사이트</h3>
-                <p> XD를 활용한 웹사이트 디자인과 워드프레스를 활용한 웹사이트 구축</p>
-                <br>  <!-- 한 줄 띄우기 -->
-                <p>2022.09 - 2022.12 팀 프로젝트</p>
+                <h3>코딩 학습 웹사이트</h3>
+                <p>XD 및 워드프레스를 활용한 팀 프로젝트.</p>
                 <a href="#" class="button">README</a>
                 <a href="#" class="button">이미지</a>
             </div>
 
-            <!-- 프로젝트 카드 3 -->
-            <div class="project-card">
-                <img src="project-image3.jpg" alt="프로젝트 3 이미지">
-                <h3>명지전문대 학과홈페이지 리모델링</h3>
-                <p>워드프레스를 활용한 명지전문대 정보통신공학과 학우들을 위한 포트폴리오 웹사이트 리모델링</p>
-                <p>워드프레스</p>
-                <br>  <!-- 한 줄 띄우기 -->
-                <p>2024.09 - 2024.12 팀 프로젝트</p>
-                <a href="#" class="button">README</a>
-                <a href="#" class="button">이미지</a>
-            </div>
-
-             <!-- 프로젝트 카드 4 -->
-            <div class="project-card">
-                <img src="project-image2.jpg" alt="프로젝트 4 이미지">
-                <h3>포트폴리오 웹사이트</h3>
-                <p>나만의 포트폴리오를 위한 웹사이트 개발</p>
-                <p>github, html, css</p>
-                <br>
-                <p>2024.11 - 2024.12 개인 프로젝트</p>
-                <a href="#" class="button">README</a>
-                <a href="#" class="button">이미지</a>
-            </div>
-        </div>
+            <!-- 추가 프로젝트 카드 -->
+            <!-- ... -->
+        </section>
     </main>
     
     <footer>
-        <br>
         &copy; 2024 김애진 포트폴리오. All Rights Reserved.
-        <br>
-        <br>
     </footer>
-    
 </body>
 </html>
