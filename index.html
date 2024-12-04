@@ -186,15 +186,15 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
+            justify-content: space-between; /* 카드를 양쪽 끝에 맞추고 여백을 균등하게 배치 */
         }
         
         .project-card {
-            flex-basis: 48%; /* 각 카드가 50% 너비를 가짐 (여백을 고려하여 48%로 설정) */
+            width: calc(50% - 10px); /* 한 줄에 두 개씩 배치 (간격을 고려해 50%에서 10px 차감) */
             background-color: #ffffff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 20px; /* 내용 여백 */
+            padding: 10px; /* 내용 여백 */
             text-align: center; /* 텍스트 가운데 정렬 */
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
