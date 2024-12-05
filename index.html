@@ -64,18 +64,29 @@
             color: #FE67A4;
             text-decoration: none;
         }
-
-        /* h2 애니메이션 정의 */
-        @keyframes slideIn {
+        
+        /* 키프레임 정의 */
+        @keyframes slideInLetter {
             0% {
                 opacity: 0;
-                transform: translateX(-100px); /* 왼쪽에서 시작 */
+                transform: translateX(-20px);
             }
             100% {
                 opacity: 1;
-                transform: translateX(0); /* 원래 위치로 이동 */
+                transform: translateX(0);
             }
         }
+
+        /* 글자마다 순차적으로 딜레이 적용 */
+        .intro h2 span:nth-child(1) { animation-delay: 0.1s; }
+        .intro h2 span:nth-child(2) { animation-delay: 0.2s; }
+        .intro h2 span:nth-child(3) { animation-delay: 0.3s; }
+        .intro h2 span:nth-child(4) { animation-delay: 0.4s; }
+        .intro h2 span:nth-child(5) { animation-delay: 0.5s; }
+        .intro h2 span:nth-child(6) { animation-delay: 0.6s; }
+        .intro h2 span:nth-child(7) { animation-delay: 0.7s; }
+        .intro h2 span:nth-child(8) { animation-delay: 0.8s; }
+        .intro h2 span:nth-child(9) { animation-delay: 0.9s; }
 
         
         /* 본문 여백 */
@@ -95,14 +106,20 @@
             padding: 40px 20px; /* 내부 여백 추가 */
         }
 
-        /* h2에 애니메이션 적용 */
+        /* h2 스타일일 */
         .intro h2 {
             margin-bottom: 40px;
             text-align: center;
             font-size: 5rem;
             color: #333;
-            opacity: 0; /* 초기 상태는 투명 */
-            animation: slideIn 1.5s ease-out forwards; /* 애니메이션 적용 */
+        }
+
+        /* 공통 초기 설정 */
+        .intro h2 span {
+            display: inline-block; /* 글자를 개별적으로 제어하기 위해 블록화 */
+            opacity: 0; /* 초기 상태: 투명 */
+            transform: translateX(-20px); /* 왼쪽에서 시작 */
+            animation: slideInLetter 0.5s ease forwards; /* 각 글자 애니메이션 */
         }
 
         .intro p {
@@ -383,7 +400,10 @@
     <main>
     <!-- 자기소개 내용 -->
     <section class="intro">
-        <h2>김애진 포트폴리오</h2>
+        <h2>
+            <span>김</span><span>애</span><span>진</span><span> </span>
+            <span>포</span><span>트</span><span>폴</span><span>리</span><span>오</span>
+        </h2>
         <p>
             <span>안녕하세요.</span><br>
             <span>저는 프론트 엔드 개발자 김애진입니다.</span>
