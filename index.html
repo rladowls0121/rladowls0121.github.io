@@ -93,10 +93,16 @@
             transition: all 0.3s ease; /* 부드러운 변화 */
         }
 
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+            overflow: hidden; /* 필요 시 부모 요소 밖으로 넘치는 부분 숨기기 */
+        }
+
         .text-line {
-            display: inline; /* 한 줄에 나란히 출력 */
+            display: inline-block; /* 글자를 하나씩 개별 처리 */
             opacity: 0; /* 텍스트가 처음에는 보이지 않음 */
-            animation: reveal 1s forwards; /* 애니메이션을 1초에 걸쳐 적용 */
+            animation: fadeIn 0.5s forwards; /* 0.5초 동안 나타나는 애니메이션 적용 */
             animation-delay: 0.1s; /* 텍스트가 한 번에 나타나지 않도록 딜레이 추가 */
             color: black; /* 글자색 */
         }
@@ -117,15 +123,18 @@
         .text-line:nth-child(14) { animation-delay: 1.4s; }
         .text-line:nth-child(15) { animation-delay: 1.5s; }
         .text-line:nth-child(16) { animation-delay: 1.6s; }
+        .text-line:nth-child(17) { animation-delay: 1.7s; }
+        .text-line:nth-child(18) {animation-delay: 1.8s; }
+        .text-line:nth-child(19) {animation-delay: 1.9s; }
         
-        @keyframes reveal {
-            0% {
-                opacity: 0;
-                transform: translateY(10px); /* 글자가 아래로부터 살짝 올라오는 효과 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* 투명 상태 */
+                transform: translateY(20px); /* 글자가 아래로부터 살짝 올라오는 효과 */
             }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            to {
+                opacity: 1; /* 완전히 보임 */
+                transform: translateY(0); /* 제자리 */
             }
         }
             
