@@ -97,14 +97,16 @@
             display: inline-block;
             white-space: nowrap; /* 텍스트 줄바꿈 방지 */
             overflow: hidden; /* 필요 시 부모 요소 밖으로 넘치는 부분 숨기기 */
+            font-size: 5rem; /* 글자 크기 */
+            color: black; /* 텍스트 색상 */
         }
 
+        /* 한 글자씩 나타나는 애니메이션 */
         .text-line {
             display: inline-block; /* 글자를 하나씩 개별 처리 */
             opacity: 0; /* 텍스트가 처음에는 보이지 않음 */
             animation: fadeIn 0.5s forwards; /* 0.5초 동안 나타나는 애니메이션 적용 */
             animation-delay: 0.1s; /* 텍스트가 한 번에 나타나지 않도록 딜레이 추가 */
-            color: black; /* 글자색 */
         }
 
         .text-line:nth-child(1) { animation-delay: 0.1s; }
@@ -138,21 +140,20 @@
             }
         }
             
-        /* 본문 여백 */
+        /* 전체 화면을 꽉 채우는 스타일 */
         main {
+            height: 100vh; /* 화면 전체 높이를 차지 */
             margin-top: 120px; /* 헤더가 고정되면 본문이 겹치지 않도록 여백 추가 */
+            display: flex; /* 컨텐츠를 중앙 정렬하기 위한 플렉스 박스 */
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
             margin-bottom: 60px; /* 푸터 높이만큼 여백 */
-            padding-top: 40px; /* 제목과 헤더 간 여백을 40px로 설정 */
-            padding: 20px;
-            text-align: center;
             background-color: #FFFBF8; /* 배경색 추가 */
-            min-height: 100vh; /* 최소 높이를 100% 뷰포트 높이로 설정 */
         }
 
         /* intro 섹션에 배경색 추가 */
         .intro {
-            background-color: #FFFBF8; /* 배경색 추가 */
-            padding: 40px 20px; /* 내부 여백 추가 */
+            text-align: center;
         }
 
         /* 제목 스타일 */
