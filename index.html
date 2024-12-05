@@ -65,17 +65,18 @@
             text-decoration: none;
         }
 
-        /* 애니메이션 정의 */
-        @keyframes fadeIn {
+        /* h2 애니메이션 정의 */
+        @keyframes slideIn {
             0% {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateX(-100px); /* 왼쪽에서 시작 */
             }
             100% {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0); /* 원래 위치로 이동 */
             }
         }
+
         
         /* 본문 여백 */
         main {
@@ -94,28 +95,31 @@
             padding: 40px 20px; /* 내부 여백 추가 */
         }
 
-        /* intro 텍스트 순차 애니메이션 */
-        .intro span {
-            display: inline-block; /* 개별 애니메이션 적용을 위해 inline-block 사용 */
-            opacity: 0; /* 초기 상태는 투명 */
-            animation: fadeIn 1s ease forwards; /* 애니메이션 적용 */
-        }
-
         /* 각 span에 애니메이션 딜레이 추가 */
-        .intro span:nth-child(1) {
+        .intro h2:nth-child(1) {
             animation-delay: 0.5s;
         }
 
-        .intro span:nth-child(2) {
-            animation-delay: 1.5s;
-        }
-
-        /* 기타 intro 스타일 */
+        /* h2에 애니메이션 적용 */
         .intro h2 {
             margin-bottom: 40px;
             text-align: center;
             font-size: 5rem;
             color: #333;
+            opacity: 0; /* 초기 상태는 투명 */
+            animation: slideIn 1.5s ease-out forwards; /* 애니메이션 적용 */
+        }
+
+        /* p 텍스트 애니메이션 정의 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .intro p {
