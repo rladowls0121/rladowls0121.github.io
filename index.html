@@ -64,6 +64,18 @@
             color: #FE67A4;
             text-decoration: none;
         }
+
+        /* 애니메이션 정의 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         
         /* 본문 여백 */
         main {
@@ -82,6 +94,37 @@
             padding: 40px 20px; /* 내부 여백 추가 */
         }
 
+        /* intro 텍스트 순차 애니메이션 */
+        .intro span {
+            display: inline-block; /* 개별 애니메이션 적용을 위해 inline-block 사용 */
+            opacity: 0; /* 초기 상태는 투명 */
+            animation: fadeIn 1s ease forwards; /* 애니메이션 적용 */
+        }
+
+        /* 각 span에 애니메이션 딜레이 추가 */
+        .intro span:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .intro span:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+
+        /* 기타 intro 스타일 */
+        .intro h2 {
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 5rem;
+            color: #333;
+        }
+
+        .intro p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
         /* 제목 스타일 */
         main h2 {
             margin-top: 100px; /* 헤더와 제목 사이에 충분한 여백 추가 */
@@ -91,20 +134,6 @@
             color: #333;
         }
         
-        .intro h2 {
-            margin-bottom: 40px; /* 제목과 내용 간 여백을 40px로 설정 */
-            text-align: center;
-            font-size: 5rem;
-            color: #333;
-        }
-        
-        .intro p {
-            font-size: 20px;
-            color: #555;
-            line-height: 1.6;
-            text-align: center;
-        }
-
         /* Skiils 섹션 */
         #skills {
             padding: 40px 20px;
