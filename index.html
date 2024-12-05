@@ -98,62 +98,30 @@
             opacity: 0; /* 텍스트가 처음에는 보이지 않음 */
             animation: reveal 1s forwards; /* 애니메이션을 1초에 걸쳐 적용 */
             animation-delay: 0.1s; /* 텍스트가 한 번에 나타나지 않도록 딜레이 추가 */
+            color: #ddd; /* 글자색 */
         }
 
-        .text-line:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        .text-line:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .text-line:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        .text-line:nth-child(4) {
-
-            animation-delay: 0.4s;
-        }
-        .text-line:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-        .text-line:nth-child(6) {
-            animation-delay: 0.6s;
-        }
-        .text-line:nth-child(7) {
-            animation-delay: 0.7s;
-        }
-        .text-line:nth-child(8) {
-            animation-delay: 0.8s;
-        }
-        .text-line:nth-child(9) {
-            animation-delay: 1s;
-        }
-        .text-line:nth-child(10) {
-            animation-delay: 1.1s;
-        }
-        .text-line:nth-child(11) {
-            animation-delay: 1.2s;
-        }
-        .text-line:nth-child(12) {
-            animation-delay: 1.3s;
-        }
-        .text-line:nth-child(13) {
-            animation-delay: 1.4s;
-        }
-        .text-line:nth-child(14) {
-            animation-delay: 1.5s;
-        }
-        .text-line:nth-child(15) {
-            animation-delay: 1.6s;
-        }
-        .text-line:nth-child(16) {
-            animation-delay: 1.7s;
-        }
+        .text-line:nth-child(1) { animation-delay: 0.1s; }
+        .text-line:nth-child(2) { animation-delay: 0.2s; }
+        .text-line:nth-child(3) { animation-delay: 0.3s; }
+        .text-line:nth-child(4) { animation-delay: 0.4s; }
+        .text-line:nth-child(5) { animation-delay: 0.5s; }
+        .text-line:nth-child(6) { animation-delay: 0.6s; }
+        .text-line:nth-child(7) { animation-delay: 0.7s; }
+        .text-line:nth-child(8) { animation-delay: 0.8s; }
+        .text-line:nth-child(9) { animation-delay: 0.9s; }
+        .text-line:nth-child(10) { animation-delay: 1.0s; }
+        .text-line:nth-child(11) { animation-delay: 1.1s; }
+        .text-line:nth-child(12) { animation-delay: 1.2s; }
+        .text-line:nth-child(13) { animation-delay: 1.3s; }
+        .text-line:nth-child(14) { animation-delay: 1.4s; }
+        .text-line:nth-child(15) { animation-delay: 1.5s; }
+        .text-line:nth-child(16) { animation-delay: 1.6s; }
         
         @keyframes reveal {
             0% {
                 opacity: 0;
-                transform: translateY(10px); /* 아래로부터 살짝 올라오는 효과 */
+                transform: translateY(10px); /* 글자가 아래로부터 살짝 올라오는 효과 */
             }
             100% {
                 opacity: 1;
@@ -491,7 +459,6 @@
             <span class="text-line">O</span>
             <span class="text-line">R</span>
             <span class="text-line">T</span>
-            <br />
             <span class="text-line">-</span>
             <span class="text-line">F</span>
             <span class="text-line">O</span>
