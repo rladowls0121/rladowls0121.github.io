@@ -93,6 +93,7 @@
             transition: all 0.3s ease; /* 부드러운 변화 */
         }
 
+        /* 텍스트와 이미지가 겹치도록 설정 */
         .animated-text {
             position: relative;
             display: inline-block;
@@ -101,8 +102,10 @@
             text-align: center;
             line-height: 1.2; /* 줄 간격 조정 */
             padding: 0; /* 이미지와 텍스트가 겹치게 할 수 있도록 padding 제거 */
+            z-index: 1; /* 텍스트가 이미지 위에 올 수 있도록 설정 */
         }
-
+        
+        /* 이미지 배경 추가 */
         .animated-text::before {
             content: "";
             position: absolute;
