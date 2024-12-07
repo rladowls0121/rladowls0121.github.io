@@ -109,11 +109,20 @@
             position: relative;
             color: black; /* 기본 글자 색상 */
             -webkit-background-clip: text; /* 텍스트에 이미지 클리핑 */
+        }
+
+        .with-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('https://raw.githubusercontent.com/rladowls0121/rladowls0121.github.io/refs/heads/main/images/KakaoTalk_20241207_194334585.png') no-repeat center center;
             background-size: cover;
-            z-index: -1; /* 텍스트 뒤로 보내기 */
-            filter: blur(2px); /* 이미지 흐리게 */
-            opacity: 0.5; /* 이미지 투명도 조절 */
+            z-index: -1; /* 텍스트 뒤로 이미지가 오도록 */
+            opacity: 0.4; /* 배경 이미지 투명도 */
+            filter: blur(2px); /* 배경 이미지 흐리게 */
         }
         
         .text-line {
@@ -444,7 +453,6 @@
     <!-- 자기소개 내용 -->
     <section class="intro">
         <h2 class="animated-text with-backgroun">
-            <img src="https://raw.githubusercontent.com/rladowls0121/rladowls0121.github.io/refs/heads/main/images/KakaoTalk_20241207_194334585.png">
             <span class="text-line">K</span>
             <span class="text-line">I</span>
             <span class="text-line">M</span>
