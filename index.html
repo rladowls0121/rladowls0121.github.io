@@ -99,6 +99,16 @@
             overflow: hidden; /* 필요 시 부모 요소 밖으로 넘치는 부분 숨기기 */
             font-size: 5rem; /* 글자 크기 */
             color: black; /* 텍스트 색상 */
+            position: relative;
+        }
+
+        /* 텍스트 배경 이미지 */
+        .with-background {
+            background: url('/path-to-your-image/KakaoTalk_20241207_194334585.png') no-repeat center center;
+            background-size: cover;
+            -webkit-background-clip: text; /* 텍스트에 이미지 클리핑 */
+            -webkit-text-fill-color: transparent; /* 텍스트 투명 처리 */
+            position: relative;
         }
 
         /* 한 글자씩 나타나는 애니메이션 */
@@ -134,6 +144,7 @@
             font-size: 5rem; /* 글자 크기 */
         }
         
+        /* fadeIn 애니메이션 */
         @keyframes fadeIn {
             from {
                 opacity: 0; /* 투명 상태 */
@@ -437,7 +448,7 @@
     <main>
     <!-- 자기소개 내용 -->
     <section class="intro">
-        <h2 class="animated-text">
+        <h2 class="animated-text with-background">
             <span class="text-line">K</span>
             <span class="text-line">I</span>
             <span class="text-line">M</span>
