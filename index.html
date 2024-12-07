@@ -93,6 +93,29 @@
             transition: all 0.3s ease; /* 부드러운 변화 */
         }
 
+        /* 텍스트 배경 이미지 */
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+            overflow: hidden; /* 필요 시 부모 요소 밖으로 넘치는 부분 숨기기 */
+            font-size: 5rem; /* 글자 크기 */
+            color: black; /* 텍스트 색상 */
+            position: relative;
+            text-align: center;
+            line-height: 1.2; /* 줄 간격 조정 */
+        }
+
+        .with-background {
+            position: relative;
+            color: black; /* 기본 글자 색상 */
+            -webkit-background-clip: text; /* 텍스트에 이미지 클리핑 */
+            background: url('https://raw.githubusercontent.com/rladowls0121/rladowls0121.github.io/refs/heads/main/images/KakaoTalk_20241207_194334585.png') no-repeat center center;
+            background-size: cover;
+            z-index: -1; /* 텍스트 뒤로 보내기 */
+            filter: blur(2px); /* 이미지 흐리게 */
+            opacity: 0.5; /* 이미지 투명도 조절 */
+        }
+
         /* 텍스트 애니메이션 */
         .text-line {
             display: inline-block; /* 글자를 하나씩 개별 처리 */
@@ -151,28 +174,9 @@
             min-height: 100vh; /* 최소 높이를 100% 뷰포트 높이로 설정 */
         }
 
-        /* 텍스트 및 이미지 겹치기 */
+        /* intro 섹션에 배경색 추가 */
         .intro {
-            position: relative;
             text-align: center;
-        }
-
-        .intro img {
-            position: absolute;
-            top: 0;  /* 이미지가 상단에 위치 */
-            left: 50%;  /* 이미지가 중앙에 위치하도록 */
-            transform: translateX(-50%); /* 정확히 중앙 정렬 */
-            z-index: -1; /* 이미지가 텍스트 뒤로 가게 설정 */
-            width: 100%;  /* 이미지가 섹션의 너비에 맞게 크기 조절 */
-            height: auto;
-        }
-
-        /* 텍스트 스타일 */
-        .animated-text {
-            position: relative;
-            z-index: 1;  /* 텍스트가 이미지 위로 나오게 설정 */
-            color: #d44a7e;
-            font-size: 5rem;
         }
 
         /* 제목 스타일 */
