@@ -174,9 +174,28 @@
             min-height: 100vh; /* 최소 높이를 100% 뷰포트 높이로 설정 */
         }
 
-        /* intro 섹션에 배경색 추가 */
+        /* 텍스트 및 이미지 겹치기 */
         .intro {
+            position: relative;
             text-align: center;
+        }
+
+        .intro img {
+            position: absolute;
+            top: 0;  /* 이미지가 상단에 위치 */
+            left: 50%;  /* 이미지가 중앙에 위치하도록 */
+            transform: translateX(-50%); /* 정확히 중앙 정렬 */
+            z-index: -1; /* 이미지가 텍스트 뒤로 가게 설정 */
+            width: 100%;  /* 이미지가 섹션의 너비에 맞게 크기 조절 */
+            height: auto;
+        }
+
+        /* 텍스트 스타일 */
+        .animated-text {
+            position: relative;
+            z-index: 1;  /* 텍스트가 이미지 위로 나오게 설정 */
+            color: #d44a7e;
+            font-size: 5rem;
         }
 
         /* 제목 스타일 */
