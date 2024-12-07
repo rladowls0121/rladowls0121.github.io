@@ -109,13 +109,14 @@
         .animated-text::before {
             content: "";
             position: absolute;
-            top: -20px; /* 텍스트보다 위로 올려서 겹치게 */
+            top: -50px; /* 텍스트보다 위로 올려서 겹치게 */
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 150%; /* 이미지가 텍스트 위로 잘 겹치게 설정 */
             background: url('https://raw.githubusercontent.com/rladowls0121/rladowls0121.github.io/refs/heads/main/images/KakaoTalk_20241207_194334585.png') no-repeat center center;
             background-size: cover;
             z-index: -1; /* 이미지를 텍스트 뒤로 배치 */
+            opacity: 0.5; /* 이미지가 너무 튀지 않도록 반투명 설정 *
         }
 
         /* 텍스트 애니메이션 */
