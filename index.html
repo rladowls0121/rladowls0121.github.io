@@ -262,17 +262,21 @@
             gap: 20px; /* 항목 간 간격 */
             justify-content: center; /* 중앙 정렬 */
             margin-top: 70px; /* 제목과 정보 리스트 사이에 70px 여백 추가 */
+            text-align: left;
+            width: 100%;
         }
 
         /* 정보 항목 스타일 */
         .info-item {
             display: flex; /* 아이콘과 텍스트를 가로로 배치 */
             align-items: center; * 아이콘과 텍스트를 세로로 중앙 정렬 */
-            justify-content: center; /* 아이콘과 텍스트를 가로로 중앙 정렬 */
+            justify-content: flex-start; /* 아이콘과 텍스트를 왼쪽 정렬 */
             font-size: 20px;
             color: #black;
             gap: 30px; /* 아이콘과 텍스트 간 간격 */
-            width: calc(33.33% - 20px); /* 한 줄에 3개씩 배치, 간격 고려 */
+            width: 33.33%; /* 한 줄에 3개씩 배치 */
+            margin-bottom: 10px; /* 각 아이템 사이 간격 추가 */
+            box-sizing: border-box; /* 여백과 패딩 포함하여 계산 */
         }
 
         /* 아이콘 스타일 */
