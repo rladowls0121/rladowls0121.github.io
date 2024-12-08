@@ -249,42 +249,18 @@
         /* 제목 스타일 */
         .about-me h1 {
             margin-bottom: 100px; /* 제목과 내용 간 여백을 100px로 설정 */
-            width: 100%; /* 부모 요소의 너비에 맞게 확장 */
             text-align: center; /* 제목은 중앙 정렬 */
             font-size: 5rem;
             margin-bottom: 20px; /* 제목과 내용 간의 여백 */
             color: #FE67A4;
         }
-
-        /* 프로필 사진과 정보 정렬 */
-        .profile-container {
-            display: flex;
-            align-items: center; /* 수직 정렬: 가운데 정렬 */
-            justify-content: center; /* 수평 정렬: 중앙 정렬 */
-            gap: 50px; /* 이미지와 정보 간격 */
-        }
         
-        /* 프로필 사진 스타일 */
-        .profile-photo {
-            margin-bottom: 20px; /* 제목과 사진 간 여백 */
-        }
-        
-        .profile-photo img {
-            width: 150px; /* 프로필 사진 크기 */
-            height: 150px; /* 정사각형으로 고정 */
-            object-fit: cover; /* 이미지를 잘라서 맞춤 */
-            border-radius: 0%; /* 이미지가 사각형으로 표시 */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-            border: 2px solid #ddd; /* 테두리 */
-        }
-
         /* 정보 리스트 */
         .info-list {
             display: flex;
-            flex-direction: column; /* 세로로 정렬 */
-            align-items: flex-start; /* 왼쪽 정렬 */
-            gap: 15px; /* 항목 간 간격 */
-            text-align: left; /* 텍스트 왼쪽 정렬 */
+            flex-wrap: wrap; /* 항목들이 두 줄로 나뉘게 함 */
+            gap: 20px; /* 항목 간 간격 */
+            justify-content: center; /* 중앙 정렬 */
             margin-top: 20px; /* 제목과 정보 리스트 사이에 20px 여백 추가 */
         }
 
@@ -296,13 +272,17 @@
             font-size: 20px;
             color: #black;
             gap: 15px; /* 아이콘과 텍스트 간 간격 */
+            width: calc(33.33% - 20px); /* 한 줄에 3개씩 배치, 간격 고려 */
+            text-align: center;
         }
 
+        /* 아이콘 스타일 */
         .info-item i {
             color: #FE67A4;  /* 아이콘 색상 */
             font-size: 18px; /* 아이콘 크기 */
         }
-        
+
+        /* 텍스트 스타일 */
         .info-item p {
             font-size: 20px;
             color: black;
@@ -496,14 +476,6 @@
     <!-- About Me 섹션 -->
     <section class="about-me">
         <h1><b>ABOUT ME</b></h1>
-        <div class="profile-container">
-            
-           <!-- 프로필 사진 -->
-           <div class="profile-photo">
-               <img src="profile-image.jpg" alt="Profile Photo">
-        </div>
-
-        <!-- 정보 리스트 -->
         <div class="info-list">
             <div class="info-item">
                 <i class="fas fa-user"></i>
@@ -530,8 +502,7 @@
                 <p>명지전문대 정보통신공학과</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="skills">
         <h2>SKILLS</h2>
