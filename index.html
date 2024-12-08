@@ -272,8 +272,8 @@
             justify-content: center; /* 아이콘과 텍스트를 수평으로 중앙 정렬 */
             font-size: 20px;
             color: black;
-            gap: 30px; /* 아이콘과 텍스트 간 간격 */
-            width: 33.33%; /* 한 줄에 3개씩 배치 */
+            gap: 10px; /* 아이콘과 텍스트 간 간격 */
+            width: calc(33.33% - 20px); /* 한 줄에 3개씩 배치, 간격 고려 */
             margin-bottom: 10px; /* 각 아이템 사이 간격 추가 */
             box-sizing: border-box; /* 여백과 패딩 포함하여 계산 */
         }
@@ -283,7 +283,6 @@
             color: #FE67A4;  /* 아이콘 색상 */
             font-size: 27px; /* 아이콘 크기 */
             display: inline-block; /* 아이콘을 인라인 블록으로 설정 */
-            vertical-align: middle; /* 아이콘이 텍스트와 세로로 중앙 정렬되도록 설정 */
         }
 
         /* 텍스트 스타일 */
@@ -292,7 +291,6 @@
             color: black;
             margin: 0; /* 기본 여백 제거 */
             line-height: 1.5; /* 텍스트 세로 정렬을 맞추기 위한 설정 */
-            vertical-align: middle; /* 텍스트를 아이콘과 맞춰 세로 중앙 정렬 */
         }
 
         /* #projects 섹션에 배경 그라데이션 추가 */
