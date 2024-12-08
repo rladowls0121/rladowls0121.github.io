@@ -408,12 +408,14 @@
 
         footer {
             position: relative;
-            width: 100%;
+            width: 681px; /* 이미지 너비에 맞춤 */
+            height: 122px; /* 이미지 높이에 맞춤 */
+            margin: 0 auto; /* 가운데 정렬 */
             background: #FFFBF8; /* 단색 배경으로 변경 */
             color: black; /* 텍스트 색 */
             text-align: center;
             z-index: 1; /* 푸터 레이어 우선순위 */
-            display: flex; /* 텍스트를 중앙에 배치하기 위한 설정 */
+            display: flex; /* 텍스트 중앙 배 */
             align-items: center; /* 수직 중앙 정렬 */
             justify-content: center; /* 수평 중앙 정렬 */
             overflow: hidden; /* 이미지가 푸터 크기 바깥으로 나가지 않도록 설정 */
@@ -423,9 +425,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%; /* 푸터의 너비와 동일 */
-            height: 100%; /* 푸터의 높이와 동일 */
-            height: auto; /* 이미지 비율 유지하며 높이 조정 */
+            width: 681px; /* 원래 이미지 너비 */
+            height: 122px; /* 원래 이미지 높이 */
+            object-fit: cover; /* 이미지 비율 유지 */
             z-index: -1; /* 이미지가 텍스트 뒤로 가도록 설정 */
         }
 
