@@ -249,10 +249,16 @@
         /* 제목 스타일 */
         .about-me h1 {
             margin-bottom: 100px; /* 제목과 내용 간 여백을 100px로 설정 */
-            text-align: center; /* 제목은 중앙 정렬 */
             font-size: 5rem;
-            margin-bottom: 20px; /* 제목과 내용 간의 여백 */
             color: #FE67A4;
+        }
+
+        /* 정보 리스트 그룹 */
+        .info-list-container {
+            display: flex;
+            justify-content: center; /* 전체적으로 중앙 정렬 */
+            width: 100%;
+            padding: 0 20px; /* 왼쪽과 오른쪽 여백 추가 */
         }
         
         /* 정보 리스트 */
@@ -263,6 +269,7 @@
             justify-content: center; /* 중앙 정렬 */
             margin-top: 70px; /* 제목과 정보 리스트 사이에 70px 여백 추가 */
             width: 100%;
+            max-width: 1200px; /* 최대 너비 설정 */
         }
 
         /* 정보 항목 스타일 */
@@ -283,6 +290,7 @@
             color: #FE67A4;  /* 아이콘 색상 */
             font-size: 27px; /* 아이콘 크기 */
             display: inline-block; /* 아이콘을 인라인 블록으로 설정 */
+            vertical-align: middle; /* 아이콘과 텍스트를 수직으로 맞추기 */
         }
 
         /* 텍스트 스타일 */
@@ -291,6 +299,7 @@
             color: black;
             margin: 0; /* 기본 여백 제거 */
             line-height: 1.5; /* 텍스트 세로 정렬을 맞추기 위한 설정 */
+            vertical-align: middle; /* 텍스트와 아이콘을 수직 중앙 정렬 */
         }
 
         /* #projects 섹션에 배경 그라데이션 추가 */
@@ -480,30 +489,32 @@
     <!-- About Me 섹션 -->
     <section class="about-me">
         <h1><b>ABOUT ME</b></h1>
-        <div class="info-list">
-            <div class="info-item">
-                <i class="fas fa-user"></i>
-                <p>김애진</p>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-birthday-cake"></i>
-                <p>02.01.21</p>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>서울특별시 은평구</p>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-phone-alt"></i>
-                <p>010-5178-2374</p>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <p>rladowls0121@naver.com</p>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-graduation-cap"></i>
-                <p>명지전문대 정보통신공학과</p>
+        <div class="info-list-container">
+            <div class="info-list">
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <p>김애진</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <p>02.01.21</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>서울특별시 은평구</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>010-5178-2374</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>rladowls0121@naver.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>명지전문대 정보통신공학과</p>
+                </div>
             </div>
         </div>
     </section>
