@@ -339,33 +339,6 @@
             color: #ccc;
         }     
 
-        // 이미지 버튼 클릭 이벤트
-        document.querySelectorAll('.image-button').forEach(button => {
-            button.addEventListener('click', function () {
-                const imageSrc = this.getAttribute('data-image');
-                const modal = document.getElementById('image-modal');
-                const modalImage = document.getElementById('modal-image');
-            
-                // 모달에 이미지 설정 및 표시
-                modalImage.src = imageSrc;
-                modal.style.display = 'block';
-            });
-        });
-
-        // 모달 닫기 이벤트
-        document.querySelector('.close').addEventListener('click', function () {
-            const modal = document.getElementById('image-modal');
-            modal.style.display = 'none';
-        });
-
-        // 모달 외부 클릭 시 닫기
-        window.addEventListener('click', function (event) {
-            const modal = document.getElementById('image-modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
         #projects {
             padding: 20px;
             text-align: center;
@@ -618,14 +591,17 @@
     <!-- 필요에 따라 추가 -->
 </section>
 
+        <!-- JavaScript 코드 -->
+    <script>
+        // 페이지가 로드되면 프로그레스 바의 너비를 조정
         window.onload = function () {
-    // 각 프로그레스 바의 width를 애니메이션으로 변경
-    document.getElementById('html-progress').style.width = '60%';
-    document.getElementById('css-progress').style.width = '60%';
-    document.getElementById('js-progress').style.width = '30%';
-    document.getElementById('python-progress').style.width = '50%';
-    document.getElementById('c-progress').style.width = '40%';
-};
+            document.getElementById('html-progress').style.width = '60%';
+            document.getElementById('css-progress').style.width = '60%';
+            document.getElementById('js-progress').style.width = '30%';
+            document.getElementById('python-progress').style.width = '50%';
+            document.getElementById('c-progress').style.width = '40%';
+        };
+    </script>
 
 
 
@@ -671,6 +647,37 @@
             <span class="close">&times;</span>
             <img class="modal-content" id="modal-image">
         </div>
+
+        <!-- JavaScript 코드 -->
+    <script>
+        // 이미지 버튼 클릭 이벤트
+        document.querySelectorAll('.image-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const imageSrc = this.getAttribute('data-image');
+                const modal = document.getElementById('image-modal');
+                const modalImage = document.getElementById('modal-image');
+            
+                // 모달에 이미지 설정 및 표시
+                modalImage.src = imageSrc;
+                modal.style.display = 'block';
+            });
+        });
+
+        // 모달 닫기 이벤트
+        document.querySelector('.close').addEventListener('click', function () {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = 'none';
+        });
+
+        // 모달 외부 클릭 시 닫기
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('image-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+        
     
     </main>
     
