@@ -174,6 +174,12 @@
             min-height: 100vh; /* 최소 높이를 100% 뷰포트 높이로 설정 */
         }
 
+        /* 각 span에 간격 추가 */
+        section p span {
+            display: inline-block;  /* span을 block처럼 취급하여 margin을 적용 */
+            margin-bottom: 3px;    /* 각 span 아래에 간격 추가 (10px는 예시값, 원하는 값으로 조정 가능) */
+        }
+
         /* intro 섹션에 배경색 추가 */
         .intro {
             text-align: center;
@@ -522,6 +528,7 @@
         <p>
             <span>안녕하세요.</span><br>
             <span>프론트 엔드 개발자 김애진입니다.</span><br>
+            <span>이 포트폴리오는 제가 그동안 작업한 프로젝트와 사용한 기술들을 공유하기 위한 공간입니다.</span>
         </p>
     </section>
 
