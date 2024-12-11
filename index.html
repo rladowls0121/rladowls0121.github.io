@@ -409,6 +409,10 @@
         .project-card a {
             color: white; /* 링크 색상 */
             text-decoration: none;
+            word-wrap: break-word; /* 텍스트를 단어 단위로 줄바꿈 */
+            overflow-wrap: break-word; /* 호환성을 위한 추가 설정 */
+            white-space: normal; /* 강제적으로 한 줄에 붙는 것을 방지 */
+            line-height: 1.5; /* 텍스트 간격 조정 */
         }
 
         /* 카드의 제목 */
@@ -420,9 +424,12 @@
 
         /* 카드의 텍스트 */
         .project-card p {
-            margin 8px 0;
+            word-wrap: break-word; /* 텍스트를 단어 단위로 줄바꿈 */
+            overflow-wrap: break-word; /* 호환성을 위한 추가 설정 */
+            white-space: normal; /* 강제적으로 한 줄에 붙는 것을 방지 */
             font-size: 0.95rem;
             color: black;
+            line-height: 1.5; /* 텍스트 간격 조정 */
         }
         
         .project-card:hover {
@@ -625,7 +632,7 @@
                 <!-- 프로젝트 카드 2 -->
                 <div class="project-card">
                     <h3>명지전문대 학과 홈페이지 리모델링</h3>
-                    <p>명지전문대 정보통신공학과 학생들을 위해 리모델링한    학과 홈페이지</p>
+                    <p>명지전문대 정보통신공학과 학생들을 위해 리모델링한 학과 홈페이지</p>
                     <p>워드프레스, html, css</p>
                     <a href="https://wlsxkawp1234.iwinv.net/" target="_blank">https://wlsxkawp1234.iwinv.net/</a>
                     <p>2024.11 - 2024.12 팀 프로젝트</p>
