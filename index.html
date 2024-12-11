@@ -322,41 +322,6 @@
             vertical-align: middle; /* 텍스트와 아이콘을 수직 중앙 정렬 */
         }
 
-        /* 모달 창 */
-        .modal {
-            display: none; /* 기본적으로 숨김 */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8); /* 배경 어둡게 */
-        }
-
-        /* 모달 이미지 */
-        .modal-content {
-            margin: auto;
-            display: block
-            max-width: 90%;
-            max-height: 80%;
-        }
-
-        /* 닫기 버튼 */
-        .close {
-             position: absolute;
-             top: 15px;
-             right: 35px;
-             color: white;
-             font-size: 30px;
-             font-weight: bold;
-        }
-
-        .close:hover {
-            color: #ccc;
-        }     
-
         #projects {
             margin-top: 70px; /* Projects 섹션 상단 여백 */
             padding: 20px;
@@ -654,49 +619,12 @@
                     <p>XD, 워드프레스</p>
                     <p>2022.09 - 2022.12 팀 프로젝트</p>
                     <div class="buttons">
-                        <a href="#" class="button">README</a>
-                        <button class="button image-button" data-image="project-image2.jpg">이미지</button>
+                        <a href="https://xd.adobe.com/view/f1a3d5af-3735-49a9-a442-81b7d8f99205-a4f0/" class="button" target="_blank">README</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- 모달 구조 -->
-        <div id="image-modal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modal-image">
-        </div>
-
-        <!-- JavaScript 코드 -->
-    <script>
-        // 이미지 버튼 클릭 이벤트
-        document.querySelectorAll('.image-button').forEach(button => {
-            button.addEventListener('click', function () {
-                const imageSrc = this.getAttribute('data-image');
-                const modal = document.getElementById('image-modal');
-                const modalImage = document.getElementById('modal-image');
-            
-                // 모달에 이미지 설정 및 표시
-                modalImage.src = imageSrc;
-                modal.style.display = 'block';
-            });
-        });
-
-        // 모달 닫기 이벤트
-        document.querySelector('.close').addEventListener('click', function () {
-            const modal = document.getElementById('image-modal');
-            modal.style.display = 'none';
-        });
-
-        // 모달 외부 클릭 시 닫기
-        window.addEventListener('click', function (event) {
-            const modal = document.getElementById('image-modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
-
+        
     <script>
         // 클래스 기반 스크롤 이동
         document.querySelectorAll('nav ul li a').forEach(anchor => {
