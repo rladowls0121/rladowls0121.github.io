@@ -487,9 +487,9 @@
         <h1><a href="index.html">JIN's Portfolio</a></h1> <!-- 제목을 링크로 변경 -->
         <nav>
             <ul>
-                <li><a href="#home">Aboutme</a></li>
-                <li><a href="#about">Skills</a></li>
-                <li><a href="#contact">Projects</a></li>
+                <li><a href=".about-me">Aboutme</a></li>
+                <li><a href=".skills">Skills</a></li>
+                <li><a href=".projects">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -678,6 +678,26 @@
             }
         });
     </script>
+
+    <script>
+        // 클래스 기반 스크롤 이동
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); // 기본 동작 방지
+        
+        // 클릭된 링크의 href 값에서 클래스명을 가져오기
+        const targetClass = this.getAttribute('href').substring(1); // .introt -> introt
+
+        // 해당 클래스를 가진 요소로 스크롤 이동
+        const targetElement = document.querySelector('.' + targetClass);
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth' // 부드러운 스크롤
+            });
+            });
+        });
+    </script>
+
         
     
     </main>
