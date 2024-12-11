@@ -303,6 +303,69 @@
             vertical-align: middle; /* 텍스트와 아이콘을 수직 중앙 정렬 */
         }
 
+        /* 모달 창 */
+        .modal {
+            display: none; /* 기본적으로 숨김 */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* 배경 어둡게 */
+        }
+
+        /* 모달 이미지 */
+        .modal-content {
+            margin: auto;
+            display: block
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        /* 닫기 버튼 */
+        .close {
+             position: absolute;
+             top: 15px;
+             right: 35px;
+             color: white;
+             font-size: 30px;
+             font-weight: bold;
+             cursor: pointer;
+        }
+
+        .close:hover {
+            color: #ccc;
+        }     
+
+        // 이미지 버튼 클릭 이벤트
+        document.querySelectorAll('.image-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const imageSrc = this.getAttribute('data-image');
+                const modal = document.getElementById('image-modal');
+                const modalImage = document.getElementById('modal-image');
+            
+                // 모달에 이미지 설정 및 표시
+                modalImage.src = imageSrc;
+                modal.style.display = 'block';
+            });
+        });
+
+        // 모달 닫기 이벤트
+        document.querySelector('.close').addEventListener('click', function () {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = 'none';
+        });
+
+        // 모달 외부 클릭 시 닫기
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('image-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         #projects {
             padding: 20px;
             text-align: center;
@@ -540,55 +603,48 @@
             <div class="project-grid">
                 <!-- 프로젝트 카드 1 -->
                 <div class="project-card">
-                    <img src="project-image2.jpg" alt="프로젝트 1 이미지">
                     <h3>포트폴리오 웹사이트</h3>
                     <p>나만의 포트폴리오를 위한 웹사이트 개발</p>
                     <p>GitHub, HTML, CSS</p>
-                    <p>2024.11 - 2024.12 개인 프로젝트</p>
+                    <p>https://rladowls0121.github.io/</p>
+                    <p>2024.12 개인 프로젝트</p>
                     <div class="buttons">
                         <a href="#" class="button">README</a>
-                        <a href="#" class="button">이미지</a>
                     </div>
                 </div>
 
                 <!-- 프로젝트 카드 2 -->
                 <div class="project-card">
-                    <img src="project-image3.jpg" alt="프로젝트 2 이미지">
-                    <h3>명지전문대 학과홈페이지 리뉴얼</h3>
-                    <p>명지전문대 정보통신공학과 학우들을 위한 학과홈페이지 리뉴얼</p>
+                    <h3>명지전문대 학과 홈페이지 리모델링</h3>
+                    <p>명지전문대 정보통신공학과 학생들을 위해 리모델링한 학과 홈페이지</p>
                     <p>워드프레스 html css</p>
-                    <p>2024.09 - 2024.12 팀 프로젝트</p>
+                    <p>https://wlsxkawp1234.iwinv.net/</p>
+                    <p>2024.11 - 2024.12 팀 프로젝트</p>
                     <div class="buttons">
                         <a href="#" class="button">README</a>
-                        <a href="#" class="button">이미지</a>
                     </div>
                 </div>
 
                 <!-- 프로젝트 카드 3 -->
                 <div class="project-card">
-                    <img src="project-image2.jpg" alt="프로젝트 3 이미지">
+                    <img src="project-image3.jpg" alt="프로젝트 3 이미지">
                     <h3>코딩 학습 웹사이트</h3>
-                    <p>XD를 활용한 웹사이트 디자인과 워드프레스를 활용한 웹사이트 구축</p>
+                    <p>보다 쉽고 편하게 코딩 공부를 돕는 웹사이트</p>
+                    <p>XD 워드프레스</p>
                     <p>2022.09 - 2022.12 팀 프로젝트</p>
                     <div class="buttons">
                         <a href="#" class="button">README</a>
-                        <a href="#" class="button">이미지</a>
-                    </div>
-                </div>
-
-                <!-- 프로젝트 카드 4 -->
-                <div class="project-card">
-                    <img src="project-image1.jpg" alt="프로젝트 4 이미지">
-                    <h3>향수 추천 웹사이트</h3>
-                    <p>XD를 활용한 향수 추천 웹사이트 디자인</p>
-                    <p>2022.03 - 2022.06 개인 프로젝트</p>
-                    <div class="buttons">
-                        <a href="#" class="button">README</a>
-                        <a href="#" class="button">이미지</a>
+                        <button class="button image-button" data-image="project-image2.jpg">이미지</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- 모달 구조 -->
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
     
     </main>
     
