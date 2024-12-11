@@ -165,7 +165,7 @@
             
         /* 본문 여백 */
         main {
-            margin-top: 72px; /* 헤더가 고정되면 본문이 겹치지 않도록 여백 추가 */
+            margin-top: 50px; /* 헤더가 고정되면 본문이 겹치지 않도록 여백 추가 */
             margin-bottom: 90px; /* 푸터 높이만큼 여백 */
             padding-top: 5px; /* 제목과 헤더 간 여백을 5px로 설정 */
             padding: 20px;
@@ -177,12 +177,13 @@
         /* 각 span에 간격 추가 */
         section p span {
             display: inline-block;  /* span을 block처럼 취급하여 margin을 적용 */
-            margin-bottom: 3px;    /* 각 span 아래에 간격 추가 (10px는 예시값, 원하는 값으로 조정 가능) */
+            margin-bottom: 5px;    /* 각 span 아래에 간격 추가 (10px는 예시값, 원하는 값으로 조정 가능) */
         }
 
         /* intro 섹션에 배경색 추가 */
         .intro {
             text-align: center;
+            font-size: 0.5rem;
         }
         
         /* 제목 스타일 */
@@ -494,7 +495,7 @@
         <nav>
             <ul>
                 <li><a href=".about-me">Aboutme</a></li>
-                <li><a href=".skills">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href=".projects">Projects</a></li>
             </ul>
         </nav>
@@ -704,8 +705,6 @@
             });
         });
     </script>
-
-        
     
     </main>
     
