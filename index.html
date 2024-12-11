@@ -382,28 +382,28 @@
         }
 
         .project-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap; /* 카드가 많으면 줄 바꿈 */
+            justify-content: center; /* 가로로 중앙 정렬 */
+            align-items: center; /* 세로로 중앙 정렬 */
             gap: 20px;
-            justify-content: center;
+            padding: 20px;
         }
         
         .project-card {
+            width: 300px; /* 카드 크기 고정 */
             background-color: #FFFBF8;
             border-radius: 10px;
             padding: 15px; /* 내용 여백 */
             text-align: center; /* 텍스트 가운데 정렬 */
             overflow: hidden;
-            box-shadow: -5px 5px 12px #FE67A4; /* 왼쪽(-X)과 아래(+Y)에 더 큰 그림자 */
+            box-shadow: -5px 5px 12px #FE67A4; /* 그림자 */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 애니메이션 */
         }
-        
-        .project-card img {
-            width: 50px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 15px;
+
+        .project-card a {
+            color: #007BFF; /* 링크 색상 */
+            text-decoration: none;
         }
         
         .project-card h3 {
@@ -606,10 +606,10 @@
                     <h3>포트폴리오 웹사이트</h3>
                     <p>나만의 포트폴리오를 위한 웹사이트 개발</p>
                     <p>GitHub, HTML, CSS</p>
-                    <p>https://rladowls0121.github.io/</p>
+                    <a href="https://rladowls0121.github.io/" target="_blank">https://rladowls0121.github.io/</a>
                     <p>2024.12 개인 프로젝트</p>
                     <div class="buttons">
-                        <a href="#" class="button">README</a>
+                        <a href="https://rladowls0121.github.io/" class="button" target="_blank">README</a>
                     </div>
                 </div>
 
@@ -618,10 +618,10 @@
                     <h3>명지전문대 학과 홈페이지 리모델링</h3>
                     <p>명지전문대 정보통신공학과 학생들을 위해 리모델링한 학과 홈페이지</p>
                     <p>워드프레스 html css</p>
-                    <p>https://wlsxkawp1234.iwinv.net/</p>
+                    <a href="https://wlsxkawp1234.iwinv.net/" target="_blank">https://wlsxkawp1234.iwinv.net/</a>
                     <p>2024.11 - 2024.12 팀 프로젝트</p>
                     <div class="buttons">
-                        <a href="#" class="button">README</a>
+                        <a href="https://wlsxkawp1234.iwinv.net/" class="button" target="_blank">README</a>
                     </div>
                 </div>
 
