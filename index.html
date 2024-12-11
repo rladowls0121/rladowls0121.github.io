@@ -303,17 +303,14 @@
             vertical-align: middle; /* 텍스트와 아이콘을 수직 중앙 정렬 */
         }
 
-        /* #projects 섹션에 배경 그라데이션 추가 */
         #projects {
             padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
             text-align: center;
-            position: relative; /* ::after를 적용하기 위한 position 설정 */
-            background-color: #fff; /* 필요 시 기본 배경 */
-            border: 1px solid black; /* 테두리 추가 */
+            position: relative;
+            background-color: #fff;
+            border: 1px solid black;
             z-index: 1;
-            overflow: hidden; /* ::after의 배경이 벗어나지 않도록 설정 */
+            overflow: hidden;
         }
 
         #projects::after {
@@ -331,19 +328,15 @@
         /* 제목 스타일 */
         .projects h2 {
             margin-bottom: 40px; /* 제목과 내용 간 여백을 40px로 설정 */
-            text-align: center;
             font-size: 5rem;
-            margin-bottom: 20px;
             color: #FE67A4;
         }
-        
-        /* 프로젝트 카드 스타일 */
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             justify-content: center;
-            margin-bottom: 40px; /* 섹션 아래에 여백 추가 */
         }
         
         .project-card {
@@ -362,18 +355,18 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
         
         .project-card h3 {
             font-size: 1.5rem;
             margin: 0 0 10px 0;
-            color: #333;
-            text-align: center;
-            margin-bottom: 40px; /* 섹션 아래에 여백 추가 */
+            color: #666;
+            margin: 5px 0;
         }
         
         .project-card p {
-            padding: 0 15px;
             margin 5px;
             font-size: 0.9rem;
             color: #666;
@@ -383,6 +376,10 @@
             transform: translateY(-10px); /* 마우스 오버 시 카드 살짝 올라가는 효과 */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 그림자가 더 짙어짐 */
         }
+
+         .buttons {
+             margin-top: 10px;
+         }
 
         .button {
             display: inline-block;
@@ -397,7 +394,7 @@
         }
         
         .button:hover {
-            background-color: #FE67A4;
+            background-color: #FF89B5;
         }
 
         footer {
@@ -555,57 +552,61 @@
     <!-- 필요에 따라 추가 -->
 </section>
 
+        <section class="projects" id="projects">
+            <h2><b>PROJECTS</b></h2>
+            <div class="project-grid">
+                <!-- 프로젝트 카드 1 -->
+                <div class="project-card">
+                    <img src="project-image2.jpg" alt="프로젝트 1 이미지">
+                    <h3>포트폴리오 웹사이트</h3>
+                    <p>나만의 포트폴리오를 위한 웹사이트 개발</p>
+                    <p>GitHub, HTML, CSS</p>
+                    <p>2024.11 - 2024.12 개인 프로젝트</p>
+                    <div class="buttons">
+                        <a href="#" class="button">README</a>
+                        <a href="#" class="button">이미지</a>
+                    </div>
+                </div>
 
-    <section class="projects">
-        <h2><b>PROJECTS</b></h2>       
-        <div class="projects">
-            <!-- 프로젝트 카드 1 -->
-            <div class="project-card">
-                <img src="project-image2.jpg" alt="프로젝트 1 이미지">
-                <h3>포트폴리오 웹사이트</h3>
-                <p>나만의 포트폴리오를 위한 웹사이트 개발</p>
-                <p>github, html, css</p>
-                <br>
-                <p>2024.11 - 2024.12 개인 프로젝트</p>
-                <a href="#" class="button">README</a>
-                <a href="#" class="button">이미지</a>
-            </div>
+                <!-- 프로젝트 카드 2 -->
+                <div class="project-card">
+                    <img src="project-image3.jpg" alt="프로젝트 2 이미지">
+                    <h3>명지전문대 학과홈페이지 리모델링</h3>
+                    <p>워드프레스를 활용한 명지전문대 정보통신공학과 학우들을 위한 포트폴리오 웹사이트 리뉴얼</p>
+                    <p>워드프레스</p>
+                    <p>2024.09 - 2024.12 팀 프로젝트</p>
+                    <div class="buttons">
+                        <a href="#" class="button">README</a>
+                        <a href="#" class="button">이미지</a>
+                    </div>
+                </div>
 
-            <!-- 프로젝트 카드 2 -->
-            <div class="project-card">
-                <img src="project-image3.jpg" alt="프로젝트 2 이미지">
-                <h3>명지전문대 학과홈페이지 리모델링</h3>
-                <p>워드프레스를 활용한 명지전문대 정보통신공학과 학우들을 위한 포트폴리오 웹사이트 리뉴얼</p>
-                <p>워드프레스</p>
-                <br>  <!-- 한 줄 띄우기 -->
-                <p>2024.09 - 2024.12 팀 프로젝트</p>
-                <a href="#" class="button">README</a>
-                <a href="#" class="button">이미지</a>
-            </div>
+                <!-- 프로젝트 카드 3 -->
+                <div class="project-card">
+                    <img src="project-image2.jpg" alt="프로젝트 3 이미지">
+                    <h3>코딩 학습 웹사이트</h3>
+                    <p>XD를 활용한 웹사이트 디자인과 워드프레스를 활용한 웹사이트 구축</p>
+                    <p>2022.09 - 2022.12 팀 프로젝트</p>
+                    <div class="buttons">
+                        <a href="#" class="button">README</a>
+                        <a href="#" class="button">이미지</a>
+                    </div>
+                </div>
 
-            <!-- 프로젝트 카드 3 -->
-            <div class="project-card">
-                <img src="project-image2.jpg" alt="프로젝트 3 이미지">
-                <h3>코딩 학습 웹사이트</h3>
-                <p> XD를 활용한 웹사이트 디자인과 워드프레스를 활용한 웹사이트 구축</p>
-                <br>  <!-- 한 줄 띄우기 -->
-                <p>2022.09 - 2022.12 팀 프로젝트</p>
-                <a href="#" class="button">README</a>
-                <a href="#" class="button">이미지</a>
+                <!-- 프로젝트 카드 4 -->
+                <div class="project-card">
+                    <img src="project-image1.jpg" alt="프로젝트 4 이미지">
+                    <h3>향수 추천 웹사이트</h3>
+                    <p>XD를 활용한 향수 추천 웹사이트 디자인</p>
+                    <p>2022.03 - 2022.06 개인 프로젝트</p>
+                    <div class="buttons">
+                        <a href="#" class="button">README</a>
+                        <a href="#" class="button">이미지</a>
+                    </div>
+                </div>
             </div>
-
-             <!-- 프로젝트 카드 4 -->
-            <div class="project-card">
-                <img src="project-image1.jpg" alt="프로젝트 4 이미지">
-                <h3>향수 추천 웹사이트</h3>
-                <p>XD를 활용한 향수 추천 웹사이트 디자인.</p>
-                <br>  <!-- 한 줄 띄우기 -->
-                <p>2022.03 - 2022.06 개인 프로젝트</p>              
-                <a href="#" class="button">README</a>
-                <a href="#" class="button">이미지</a>
-            </div>
-            <br>
-    </section>
+        </section>
+    
     </main>
     
     <footer>
