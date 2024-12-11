@@ -391,15 +391,19 @@
         }
         
         .project-card {
-            width: 320px; /* 카드 크기 고정 */
-            height: 420px; /* 카드 높이 고정 */
+            display: flex; /* Flexbox 사용 */
+            flex-direction: column; /* 세로로 정렬 */
+            justify-content: center; /* 수직 중앙 정렬 */
+            align-items: center; /* 수평 중앙 정렬 */
+            width: 350px; /* 카드 너비 */
+            height: 3500px; /* 카드 높이 */
             background-color: #FFFBF8;
-            border-radius: 10px;
+            border-radius: 10px; * 테두리 둥글게 */
             padding: 20px; /* 내용 여백 */
             text-align: center; /* 텍스트 가운데 정렬 */
-            overflow: hidden;
             box-shadow: -5px 5px 12px #FE67A4; /* 그림자 */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 애니메이션 */
+            overflow: hidden; /* 내용이 넘칠 경우 숨김 */
         }
 
         .project-card a {
